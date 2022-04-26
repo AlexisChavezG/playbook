@@ -17,5 +17,9 @@ const post = {
 
 }
 const biography = {
-    
+    aboutMe : "",
+    lastChange : function(){
+        return new Date()
+    }
 }
+console.log(biography.lastChange());
