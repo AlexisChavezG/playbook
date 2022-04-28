@@ -23,8 +23,21 @@ app.get('/v1/explorers/:id',(req, res)=>{
 app.post('/v1/explorers',(req, res)=>{
      console.log(`Fecha del parametro ${new Date()}`)
      const explorer = req.body
-     res.status(201).json({menssage : "Created"})
+     res.status(201).json({menssage : `Created ${explorer.name}` })
 })
+app.put('/v1/explorers/:id',(req,res)=>{
+    console.log(`Api Explorer PUT request ${new Date()}`)
+    console.log(`Update explorer with id ${req.params.id}`)
+    const requestBody = req.body
+    res.status(200).json({menssage : "Update"})
+})
+app.delete('/v1/exolorers/:id',(req, res)=>{
+    console.log(`Api exploreres delete  request ${new Date()}`)
+    console.log(`Delete explorer with id ${req.params.id}`)
+    const requestBody = req.body
+    res.status(200).json({menssage: "Delete"})
+})
+
 // Con esto inicializamos esta app
 app.listen(port, () => {
  console.log(`Example app listening on port ${port}`)
