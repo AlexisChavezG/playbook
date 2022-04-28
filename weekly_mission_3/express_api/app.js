@@ -13,6 +13,8 @@ app.get('/v1/explorers',(req, res)=>{
     res.status(200).json(explorers)
 
 })
+
+
 app.get('/v1/explorers/:id',(req, res)=>{
     console.log('Este es una funcion que recibe un parametro')
     const explorer = {id:1, name :"ExplorerName"}
