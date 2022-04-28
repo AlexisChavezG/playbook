@@ -1,10 +1,8 @@
-// Usando objeto express
 const express = require('express')
-// App de Express
 const app = express()
-app.use(express.json()) // Indicamos que usaremos JSON
-// Puerto en que vamos a ver nuestra app: localhost:3000
+app.use(express.json())
 const port = 3000
+
 app.get('/v1/explorers',(req, res)=>{
     console.log(`Información del usuario explore ${new Date()}`)
     const explorer1 = {id:1,name:"Alexis"}
